@@ -160,6 +160,12 @@ main {
   flex-direction: column;
 }
 
+.swiper-card {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+
 .catalog__img {
   width: 100%;
   border-radius: 20px;
@@ -310,4 +316,54 @@ h1 {
 
 
 /*------------------регистрация-------------------*/
-  
+
+$bg-btn: darkblue;
+$color-btn: white;
+$font-size-btn: 20px;
+$radius-btn: 15%;
+
+.auth__btn--login {
+  color: $color-btn;
+  background-color: $bg-btn;
+  font-size: $font-size-btn;
+  border-radius: $radius-btn;
+  padding-left: $font-size-btn*0.5;
+  padding-right: $font-size-btn*0.5;
+  &:hover {
+    background-color: #10c44c;
+  }
+}
+
+@mixin set-size($font-size:16px) {
+  font-size: $font-size;
+  padding: $font-size*0.5 $font-size*0.3;
+}
+
+.auth {
+    input {
+      border-radius: $radius-btn;
+      border: none;
+      @include set-size($font-size-btn);
+    }
+
+   &__value {
+    border-radius: $radius-btn;
+   }
+   &__btn {
+    border: none;
+    transition: all 0.3s;
+    &--login {
+      @include set-colors();
+      &:hover{
+        background: lighten($bg-btn, 30%);
+      }
+    }
+    &--reg {
+      @include set-colors( lighten($bg-btn, 50%), darken($bg-btn,10%));
+      &:hover{
+        background: lighten($bg-btn, 30%);
+      }
+    }
+   }
+}
+

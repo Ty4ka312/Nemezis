@@ -147,6 +147,11 @@ main {
   flex-direction: column;
 }
 
+.swiper-card {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
 .catalog__img {
   width: 100%;
   border-radius: 20px;
@@ -293,3 +298,48 @@ h1 {
 }
 
 /*------------------регистрация-------------------*/
+.auth__btn--login {
+  color: white;
+  background-color: darkblue;
+  font-size: 20px;
+  border-radius: 15%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.auth__btn--login {
+  background-color: green;
+}
+
+.auth {
+  max-width: 200px;
+  background-color: #5858ff;
+  padding: 20px;
+}
+
+.auth div {
+  padding-top: 10px;
+}
+
+.auth div:first-child {
+  padding-top: 0;
+}
+
+.auth__value {
+  border-radius: 15%;
+}
+
+.auth__btn {
+  border: none;
+  transition: all 0.3s;
+}
+
+.auth__btn--login {
+  color: white;
+  background: darkblue;
+}
+
+.auth__btn--reg {
+  color: #0000f1;
+  background: #0000f1;
+}
